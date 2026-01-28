@@ -1,0 +1,86 @@
+\documentclass[a4paper, 12pt, german]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{makecell}
+\usepackage[ngerman]{babel}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\usepackage{csquotes}
+\usepackage[detect-all]{siunitx}
+\usepackage{booktabs}
+\graphicspath{ {./images} }
+\addbibresource{sources/sources.bib}
+
+\geometry{a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm}
+\title{Titel der Arbeit}
+\author{Dominik Agreš}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\centerline{\large \textbf{-arbeit}}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=70mm]{images/hhn_logo.png}
+\end{figure}
+
+\begin{center}
+    \textbf{Matrikelnummer:}  \\
+    \textbf{Studiengang:}  \\
+    \textbf{Email:}  \\
+    \textbf{Betreuer:} \\
+\end{center}
+
+%\input{chapters/0-sperrvermerk.tex}
+%
+\input{chapters/0-eidesstattliche.tex}
+
+\newpage
+\tableofcontents
+\newpage
+
+\input{chapters/zusammenfassung.tex}
+
+\input{chapters/1-einleitung.tex}
+%\newpage
+\input{chapters/2-grundlagen.tex}
+%\newpage
+\input{chapters/3-methodik.tex}
+%\newpage
+\input{chapters/4-konzept.tex}
+%\newpage
+\input{chapters/5-analyse.tex}
+%\newpage
+\input{chapters/6-implementierung.tex}
+%\newpage
+\input{chapters/7-evaluation.tex}
+%\newpage
+\input{chapters/8-fazit.tex}
+
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+\input{chapters/abbrevationen.tex}
+
+\newpage
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\printbibliography
+
+\newpage
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+
+\newpage
+\addcontentsline{toc}{section}{Tabellenverzeichnis}
+\listoftables
+
+\input{chapters/anhang.tex}
+
+\end{document}
