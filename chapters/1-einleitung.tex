@@ -1,10 +1,35 @@
 \section{Einleitung}
 
+Hier sind ein paar folgende Templates um das leben besser zu machen, für erstellen von Tabellen kann das folgende Template verwendet werden: 
+\begin{table}[H]
+  \centering
+  \caption{Beispiel-Tabelle (erweiterbar)}
+  \label{tab:einleitung-template}
+  \begin{tabularx}{\textwidth}{@{}l X X@{}}
+    \toprule
+    Kriterium & Beschreibung & Status \\
+    \midrule
+    Beispiel 1 & Kurze Beschreibung fuer den ersten Eintrag. & Offen \\
+    Beispiel 2 & Zweiter Eintrag als Vorlage zum Erweitern. & In Arbeit \\
+    Beispiel 3 & Dritter Eintrag mit beliebig langem Text in den X-Spalten. & Erledigt \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+Ein Paper kann man so Zitieren\parencite{einstein1905electrodynamics}, um den Zitierstil zu ändern muss in \texttt{main.tex} die folgende Zeile angepasst werden:
+\begin{verbatim}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\end{verbatim}
+Beispiel für APA:
+\begin{verbatim}
+\usepackage[backend=biber,style=apa]{biblatex}
+\end{verbatim}
+
 \subsection{Motivation}
 Motivation der Arbeit 
 
 \subsection{Problemstellung}
-Problem das gelöst wird 
+Problem das gelöst wird, Forschungsfrage 
 
 \subsection{Zielsetzung}
 Zielsetzung - wann hat die Arbeit ihre Fragestellung beantwortet

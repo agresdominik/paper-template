@@ -1,16 +1,12 @@
-PDF = out
-TEX = main.tex
-OUTDIR = $(realpath out)
 
-all:
-	latexmk -pdf -outdir=$(OUTDIR) $(TEX)
-	mv $(OUTDIR)/$(basename $(TEX)).pdf $(PDF).pdf
+build:
+	latexmk -pdf main.tex -outdir=out
+	mv ./out/main.pdf ./build_output.pdf
 
 watch:
-	make all
-	zathura *.pdf &
-	while inotifywait -e close_write $(TEX); do make all; done
+	latexmk -pdf -pvc main.tex -outdir=out
 
 clean:
-	latexmk -c -outdir=$(OUTDIR)
-	rm -f $(OUTDIR)/*
+	latexmk -c -outdir=out
+	rm -f build_output.pdf
+	rm -dr ./out
